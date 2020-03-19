@@ -1,0 +1,10 @@
+default_context:
+  author_name: Tutte Institute
+  conda_path: ~/miniconda3/bin/conda
+  description: This dataset is intended to mobilize researchers to apply recent advances in natural language processing to generate new insights in support of the fight against COVID-19.
+  module_name: src
+  open_source_license: MIT
+  project_name: COVID-19 NLP
+  python_version: '3.7'
+  repo_name: covid_nlp
+  virtualenv: conda
