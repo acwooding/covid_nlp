@@ -1,6 +1,5 @@
 COVID-19 NLP
 ==============================
-_Author: Tutte Institute_
 
 This dataset is intended to mobilize researchers to apply recent advances in natural language processing to generate new insights in support of the fight against COVID-19.
 
@@ -12,7 +11,15 @@ GETTING STARTED
 cd covid_nlp
 make create_environment
 conda activate covid_nlp
+make update_environment
 ```
+
+* fetch and process the datasets:
+
+```
+make data
+```
+
 * Explore the notebooks in the `notebooks` directory
 
 Project Organization
