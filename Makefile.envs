@@ -25,6 +25,7 @@ ifeq (conda,$(VIRTUALENV))
 	@echo ">>> git init"
 	@echo ">>> git add ."
 	@echo ">>> git commit -m 'initial import'"
+	#$(PYTHON_INTERPRETER) -m ipykernel install --user --name "$(PROJECT_NAME)" --display-name "conda env:$(PROJECT_NAME)"
 ifneq ("X$(wildcard .post-create-environment.txt)","X")
 	@cat .post-create-environment.txt
 endif

@@ -14,9 +14,8 @@ GETTING STARTED
 cd covid_nlp
 make create_environment
 conda activate covid_nlp
-make update_environment
+make update_environment   # to enable the editable src package
 ```
-
 
 * fetch and process the datasets:
 
@@ -26,7 +25,6 @@ make data
 
 * Explore the notebooks in the `notebooks` directory. Notebooks
   are numbered to indicate what order they should be run.
-=======
 
 Project Organization
 ------------
