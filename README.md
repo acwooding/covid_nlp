@@ -2,7 +2,10 @@ COVID-19 NLP
 ==============================
 _Author: Tutte Institute_
 
-This dataset is intended to mobilize researchers to apply recent advances in natural language processing to generate new insights in support of the fight against COVID-19.
+This is an easydata-generated templated intended to help researchers
+get up and running quickly with the COVID NLP dataset available from:
+    https://pages.semanticscholar.org/coronavirus-research
+
 
 GETTING STARTED
 ---------------
@@ -12,8 +15,11 @@ GETTING STARTED
 cd covid_nlp
 make create_environment
 conda activate covid_nlp
+make update_environment
 ```
-* Explore the notebooks in the `notebooks` directory
+
+* Explore the notebooks in the `notebooks` directory. Notebooks
+  are numbered to indicate what order they should be run.
 
 Project Organization
 ------------
@@ -35,26 +41,10 @@ Project Organization
         * The final, canonical data sets for modeling.
 * `docs`
     * A default Sphinx project; see sphinx-doc.org for details
-* `models`
-    * Trained and serialized models, model predictions, or model summaries
-    * `models/trained`
-        * Trained models
-    * `models/output`
-        * predictions and transformations from the trained models
 * `notebooks`
     *  Jupyter notebooks. Naming convention is a number (for ordering),
     the creator's initials, and a short `-` delimited description,
     e.g. `1.0-jqp-initial-data-exploration`.
-* `references`
-    * Data dictionaries, manuals, and all other explanatory materials.
-* `reports`
-    * Generated analysis as HTML, PDF, LaTeX, etc.
-    * `reports/figures`
-        * Generated graphics and figures to be used in reporting
-    * `reports/tables`
-        * Generated data tables to be used in reporting
-    * `reports/summary`
-        * Generated summary information to be used in reporting
 * `environment.yml`
     * (if using conda) The YAML file for reproducing the analysis environment
 * `setup.py`
@@ -75,9 +65,6 @@ Project Organization
     * `src/models`
         * Scripts to train models and then use trained models to make predictions.
         e.g. `predict_model.py`, `train_model.py`
-* `tox.ini`
-    * tox file with settings for running tox; see tox.testrun.org
-
 
 --------
 

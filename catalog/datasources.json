@@ -1,0 +1,76 @@
+{
+  "covid_nlp_20200319": {
+    "dataset_dir": "/Users/kjell/Documents/devel/git/timc/covid_nlp/data/raw",
+    "load_function_args": [],
+    "load_function_kwargs": {},
+    "load_function_module": "src.data.utils",
+    "load_function_name": "process_dataset_default",
+    "name": "covid_nlp_20200319",
+    "url_list": [
+      {
+        "contents": "COVID DATASET LICENSE AGREEMENT\nBy accessing, downloading or otherwise using any Journals, Articles, Metadata, Abstracts,\nFull-Texts or any other content types provided in the COVID-19 Open Research Dataset (CORD-19)\nDatabase (the \u201cData\u201d), You expressly acknowledge and agree to the following:\n\n* AI2 grants to You a worldwide, perpetual, non-exclusive, non-transferable\n  license to use and make derivatives of the Data for text and data mining only.\n\n* AI2 warrants that it has the right to make the Data available to You as\n  provided for in and subject to this Agreement and in accordance with applicable law. \n  EXCEPT FOR THE LIMITED WARRANTY IN THIS SECTION, THE DATA IS PROVIDED \u201cAS IS\u201d, WITHOUT ANY\n  WARRANTIES OF ANY KIND. \n\n* You agree to comply with all applicable local, state, national, and international laws\n  and regulations with respect to AI2\u2019s license and Youruse of the Data.\n\n* Data provided by AI2 is from copyrighted sources of the respective copyright holders.\n  You are solely responsible for Your and Your users\u2019 compliance with any copyright, patent\n  or trademark restrictions and are referred to the copyright, patent or trademark notices\n  appearing in the original sources, all of which are hereby incorporated by reference.\n",
+        "fetch_action": "create",
+        "file_name": "covid_nlp_20200319.license",
+        "hash_value": "26a71b2c70b8097c8b1c66ccdd89af704dccc149",
+        "name": "LICENSE",
+        "unpack_action": "copy"
+      },
+      {
+        "contents": "COVID-19 Open Research Dataset (CORD-19)\nParticipate in the CORD-19 Challenge\n\nKaggle is hosting the COVID-19 Open Research Dataset Challenge, a\nseries of important questions designed to inspire the community\nto use CORD-19 to find new insights about the COVID-19 pandemic\nincluding the natural history, transmission, and diagnostics for\nthe virus, management measures at the human-animal interface,\nlessons from previous epidemiological studies, and more.\nDownload CORD-19\n\nBy downloading this dataset you are agreeing to the Dataset\nLicense. Specific licensing information for individual articles\nin the dataset is available in the metadata file.\n\nAdditional licensing information is available on the PMC website,\nmedRxiv website and bioRxiv website.\n\nLatest release contains papers up until 2020-03-13 with over\n13,000 full text articles.\n\nDownload here:\n\n    Commercial use subset (includes PMC content) -- 9000 papers, 186Mb\n    Non-commercial use subset (includes PMC content) -- 1973 papers, 36Mb\n    PMC custom license subset -- 1426 papers, 19Mb\n    bioRxiv/medRxiv subset (pre-prints that are not peer reviewed) -- 803 papers, 13Mb\n    Metadata file -- 47Mb\n    Readme\n\nEach paper is represented as a single JSON object. The schema is\navailable here.\n\nDescription:\n\nThe dataset contains all COVID-19 and coronavirus-related\nresearch (e.g. SARS, MERS, etc.) from the following sources:\n\n* PubMed's PMC open access corpus using this query\n  (COVID-19 and coronavirus research)\n* Additional COVID-19 research articles from a corpus\n  maintained by the WHO\n* bioRxiv and medRxiv pre-prints using the same query\n  as PMC (COVID-19 and coronavirus research)\n\nWe also provide a comprehensive metadata file of 29,000\ncoronavirus and COVID-19 research articles with links to PubMed,\nMicrosoft Academic and the WHO COVID-19 database of\npublications (includes articles without open access full text).\n\nWe recommend using metadata from the comprehensive file when\navailable, instead of parsed metadata in the dataset. Please note\nthe dataset may contain multiple entries for individual PMC IDs\nin cases when supplementary materials are available.\n\nThis repository is linked to the WHO database of publications on\ncoronavirus disease and other resources, such as Microsoft\nAcademic Graph, PubMed, and Semantic Scholar. A coalition\nincluding the Chan Zuckerberg Initiative, Georgetown University\u2019s\nCenter for Security and Emerging Technology, Microsoft Research,\nand the National Library of Medicine of the National Institutes\nof Health came together to provide this service. We also thank\nand acknowledge Unpaywall for providing open access license\ninformation for portions of the dataset.\n\nCitation:\n\nWhen including CORD-19 data in a publication or redistribution,\nplease cite the dataset as follows:\n\nIn bibliography:\n\nCOVID-19 Open Research Dataset (CORD-19). 2020. Version 2020-03-13. \nRetrieved from https://pages.semanticscholar.org/coronavirus-research. \nAccessed YYYY-MM-DD. doi:10.5281/zenodo.3715506\n\nIn text:\n\n(CORD-19, 2020)\n\nThe Allen Institute for AI and particularly the Semantic Scholar\nteam will continue to provide updates to this dataset as the\nsituation evolves and new research is released.\n\nContribute to CORD-19\n\nTo maximize impact and increase full text available to the global\nresearch community, we are actively encouraging publishers to\nmake their research content openly available for AI projects like\nthis that benefit the common good. If you\u2019re a publisher\ninterested in contributing to the CORD-19 corpus, please contact\npartnerships@allenai.org.\n",
+        "fetch_action": "create",
+        "file_name": "covid_nlp_20200319.readme",
+        "hash_value": "3dcae4910b63653ff27569d34617f3f97ecb5761",
+        "name": "DESCR",
+        "unpack_action": "copy"
+      },
+      {
+        "fetch_action": "url",
+        "file_name": "comm_use_subset.tar.gz",
+        "hash_type": "sha1",
+        "hash_value": "53da7c057c32482ba91a751687b51d04ded673c9",
+        "name": "commercial use subset",
+        "url": "https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-03-13/comm_use_subset.tar.gz"
+      },
+      {
+        "fetch_action": "url",
+        "file_name": "noncomm_use_subset.tar.gz",
+        "hash_type": "sha1",
+        "hash_value": "752569f53bad8d242cdacec4e887b4c0334ea752",
+        "name": "non-commmercial use subset",
+        "url": "https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-03-13/noncomm_use_subset.tar.gz"
+      },
+      {
+        "fetch_action": "url",
+        "file_name": "pmc_custom_license.tar.gz",
+        "hash_type": "sha1",
+        "hash_value": "c6795a4d40744b68066323e16d7830c737ebfa1b",
+        "name": "PMC custom license",
+        "url": "https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-03-13/pmc_custom_license.tar.gz"
+      },
+      {
+        "fetch_action": "url",
+        "file_name": "biorxiv_medrxiv.tar.gz",
+        "hash_type": "sha1",
+        "hash_value": "351af4f267a30a667952b29b9314edca6131dd1d",
+        "name": "bioRxiv and medRxiv",
+        "url": "https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-03-13/biorxiv_medrxiv.tar.gz"
+      },
+      {
+        "fetch_action": "url",
+        "file_name": "all_sources_metadata_2020-03-13.csv",
+        "hash_type": "sha1",
+        "hash_value": "72856c9bd4c79dd18720d07e69989143a3714fbe",
+        "name": "metadata file",
+        "url": "https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-03-13/all_sources_metadata_2020-03-13.csv"
+      },
+      {
+        "fetch_action": "url",
+        "file_name": "all_sources_metadata_2020-03-13.readme",
+        "hash_type": "sha1",
+        "hash_value": "4920c74bcddc0095c93fc2287843d3f6104dd472",
+        "name": "readme",
+        "url": "https://ai2-semanticscholar-cord-19.s3-us-west-2.amazonaws.com/2020-03-13/all_sources_metadata_2020-03-13.readme"
+      }
+    ]
+  }
+}

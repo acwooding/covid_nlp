@@ -10,6 +10,7 @@ dependencies:
     - holoviews
     - umap-learn>=0.4.0rc1
     - enstop
+    - hdbscan
   - setuptools
   - wheel
   - git>=2.5  # for git worktree template updating
@@ -29,3 +30,4 @@ dependencies:
   - bokeh
   - nltk
   - numba
+  - ipykernel
