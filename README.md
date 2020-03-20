@@ -1,6 +1,5 @@
 COVID-19 NLP
 ==============================
-_Author: Tutte Institute_
 
 This is an easydata-generated templated intended to help researchers
 get up and running quickly with the COVID NLP dataset available from:
@@ -18,8 +17,16 @@ conda activate covid_nlp
 make update_environment
 ```
 
+
+* fetch and process the datasets:
+
+```
+make data
+```
+
 * Explore the notebooks in the `notebooks` directory. Notebooks
   are numbered to indicate what order they should be run.
+=======
 
 Project Organization
 ------------
