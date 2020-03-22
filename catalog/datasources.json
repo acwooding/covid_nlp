@@ -3,8 +3,8 @@
     "dataset_dir": "/Users/kjell/Documents/devel/git/timc/covid_nlp/data/raw",
     "load_function_args": [],
     "load_function_kwargs": {},
-    "load_function_module": "src.data.utils",
-    "load_function_name": "process_dataset_default",
+    "load_function_module": "src.data.localdata",
+    "load_function_name": "process_covid_metadata",
     "name": "covid_nlp_20200319",
     "url_list": [
       {
