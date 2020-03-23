@@ -100,27 +100,30 @@ def process_covid_metadata(kind='all', extract_dir='covid_nlp_20200319', unpack_
 
 
 def create_section_df(df, unpack_dir=None, extract_dir='covid_nlp_20200319', min_tokens=200):
-    """
-    Given a dataframe df of the form of the covid metadata augmented dataset (e.g. covid_nlp_20200319)
+    """Dataset Transformer: extract individual sections from papers, returning one section per row
 
-    Created a dataframe where each row is a section of a paper from the dataframe (for which a
-    full-text version exists)
+    Given a dataframe, df, formatted like the covid metadata augmented
+    dataset (e.g. covid_nlp_20200319), created a new dataframe where
+    each row is a section of a paper contained in `df` (for which a
+    full-text version exists).
 
     Parameters
     ----------
     df:
         a metadata dataframe (.data from a metadata datasource)
+        with at least 'has_full_text' and 'path' fields.
     extract_dir:
-        The name of the directory the files have been unpacked into
+        The name of the directory (relative to `unpack_dir`) the files have been unpacked into.
     min_tokens:
-        Require sections to have at least min_tokens tokens to be included
+        Require sections to have at least `min_tokens` tokens to be included in this dataframe
     unpack_dir:
         The interim data directory. If None, it will use the
-        interim_data_path in paths. Only pass this if you want to override the default.
+        paths['interim_data_path']. Only pass this if you need to override the default.
 
     Returns
     -------
     section dataframe with columns: ['paper_id', 'title', 'abstract', 'section', 'text', 'token_counts']
+
     """
     if unpack_dir:
         unpack_dir = pathlib.Path(unpack_dir)
