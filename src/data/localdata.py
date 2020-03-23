@@ -16,21 +16,32 @@ __all__ = [
 
 def process_covid_metadata(kind='all', extract_dir='covid_nlp_20200319', unpack_dir=None, metadata=None):
     """
-    Add the file paths (relative to the extract_dir) to the metadata and return the metadata dataframe
-    in (data, target, metdata) format to be converted into a DataSet.
+    Convert the covid-19 dataset to a metadata DataFrame
+
+    Add the file paths (relative to the extract_dir) to the metadata, converting it to a
+    Pandas Dataframe, and returning it in the format required to be converted to a DataSet;
+    i.e. (data, target, metdata) format.
 
     Parameters
     ----------
     extract_dir:
-        The name of the directory the files have been unpacked into
-    kind: Default 'all'
-        One of {'all', 'cc-by-licensed', 'commercial_use', 'non_commercial_use', 'custom_license', 'biorxiv'}
-        Will filter down to the given kind.
+        The name of the directory (relative to `unpack_dir`) the files have been unpacked into
+    kind: {'all', 'cc-by-licensed', 'commercial_use', 'non_commercial_use', 'custom_license', 'biorxiv'}
+        Default 'all'. The original dataset separated papers into 5 types. Specifying one of these
+        license types will filter the resulting dataframe down to just papers of the given kind.
     metadata:
-        Any additional metadata to add
+        Any additional metadata fields to add
     unpack_dir:
         The interim data directory. If None, it will use the
-        interim_data_path in paths. Only pass this if you want to override the default.
+        paths['interim_data_path']. Only pass this if you need to override the default.
+
+    Returns
+    -------
+    Tuple: (data, None, metadata), where
+        data:
+            A pandas DataFrame containing the covid paper metadata, and
+        metadata:
+            The DataSource-specific metadata dict, including LICENSE and DESCR information
     """
     if metadata is None:
         metadata = {}
