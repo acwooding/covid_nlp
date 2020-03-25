@@ -8,9 +8,13 @@ dependencies:
     - nbdime
     - datashader
     - holoviews
-    - umap-learn>=0.4.0rc1
+    - umap-learn==0.4.0rc2
     - enstop
     - hdbscan
+    - scispacy
+    - https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.2.4/en_core_sci_sm-0.2.4.tar.gz
+    - top2vec
+    - wordcloud
   - setuptools
   - wheel
   - git>=2.5  # for git worktree template updating
