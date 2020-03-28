@@ -228,11 +228,13 @@ dependencies:
     - srsly==1.0.2
     - tbb==2019.0
     - tblib==1.6.0
+    - textmap==0.0.3
     - thinc==7.4.0
     - toolz==0.10.0
     - top2vec==1.0.6
     - tqdm==4.43.0
     - umap-learn==0.4.0rc3
+    - vectorizers==0.0.3
     - wasabi==0.6.0
     - wordcloud==1.6.0
     - xarray==0.15.0

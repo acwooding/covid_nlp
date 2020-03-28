@@ -6,6 +6,8 @@ from .log import logger
 # Timing and Performance
 
 import hdbscan
+import umap
+import umap.plot
 import numpy as np
 import pandas as pd
 from scipy.spatial.distance import cdist
@@ -207,3 +209,21 @@ class RankedPoints:
     def get_furthest_samples_for_cluster(self, cluster_id, n_samples=5):
         """Get the N points furthest away from the cluster centroid/medoid"""
         return self.rank_cluster_points_by_distance(cluster_id).tail(n_samples)
+
+def get_support_index(row):
+    """
+    Helper function to obtain the words that a document (row) is supported on in the vocabulary.
+
+    Parameters
+    ----------
+    row:
+        a row from the document matrix
+
+    Returns
+    -------
+    array of column indices that the row is supported on
+    """
+    inds = row.indices
+    data = row.data
+    order = np.argsort(-data)
+    return inds[order]
