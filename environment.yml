@@ -8,9 +8,12 @@ dependencies:
     - nbdime
     - datashader
     - holoviews
-    - umap-learn>=0.4.0rc1
+    - umap-learn>=0.4.0rc3
     - enstop
     - hdbscan
+    - git+https://github.com/TutteInstitute/TextMAP.git
+    - git+https://github.com/TutteInstitute/vectorizers.git
+    - wordcloud
   - setuptools
   - wheel
   - git>=2.5  # for git worktree template updating
